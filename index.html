@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <main class="weather-card current-weather">
+            <header class="location-header">
+                <p id="location-text">Loading...</p>
+                <span id="notification-icon">🔔</span>
+            </header>
+            
+            <section class="main-display">
+                <div class="weather-icon-temp">
+                    <img id="main-icon" src="assets/icons/default.svg" alt="Weather Icon">
+                    <h1 id="temperature-main">--°</h1>
+                </div>
+                <p id="description-text">Fetching data...</p>
+
+                <div class="detailed-stats">
+                    <div class="stat">
+                        <span class="icon">💨</span>
+                        <p id="wind-speed">Wind -- km/h</p>
+                    </div>
+                    <div class="stat">
+                        <span class="icon">💧</span>
+                        <p id="humidity-percent">Humidity --%</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hourly-forecast">
+                <h3>Today's Weather</h3>
+                <ul id="hourly-list">
+                    <p class="loading-text">Loading hourly data...</p>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="weather-card stats-cities">
+            <header>
+                <h2>City Search</h2>
+                <div class="search-box">
+                    <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+                    <button id="search-button">🔍</button>
+                </div>
+            </header>
+
+            <section class="stats-chart">
+                 <div class="graph-placeholder">
+                    <p>Search a city to see results here!</p>
+                </div>
+            </section>
+
+            <section class="other-cities">
+                <h3>Current Search Result</h3>
+                <ul id="city-search-results">
+                    <p class="loading-text">Use the search bar above.</p>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
